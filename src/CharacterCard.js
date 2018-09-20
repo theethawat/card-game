@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import WordCard from './WordCard';
 import './App.css';
 
 export default class CharacterCard extends Component {
@@ -12,6 +13,7 @@ export default class CharacterCard extends Component {
 
     activate = () => {
         if(!this.state.active){
+            this.props.activationHandler(this.props.value);
             this.setState({active: true})
         }
     }
