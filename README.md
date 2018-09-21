@@ -1,3 +1,18 @@
+#My Readme
+-ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon] (https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
+โดยเอามาตรงที่
+```
+    constructor(props){
+        super(props)
+        this.state = {
+            active: false,
+        }
+    }
+```
+ใน WordCard.js
+
+
+#React Readme
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

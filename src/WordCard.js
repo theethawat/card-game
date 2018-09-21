@@ -5,6 +5,8 @@ import './App.css';
 
 
 const prepareStateFormWord = (given_word) =>{
+    /*Recieve word from App.js */
+   
     let word = given_word.toUpperCase()
     let chars = _.suffle(Array.form(word))
     return{
@@ -23,7 +25,13 @@ const prepareStateFormWord = (given_word) =>{
     }
 }
 export default class WordCard extends Component{
-    activationHandler = c => { 
+    constructor(props){
+        super(props)
+        this.state = {
+            active: false,
+        }
+    }
+    activationHandler = (c) => { 
         let guess = [this.state.guess, c]
         this.setState({guess})
         if(guess.length == this.state.chars.length){
