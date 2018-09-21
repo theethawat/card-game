@@ -1,5 +1,5 @@
 ## My Readme
--ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon] (https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
+-ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon](https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
 โดยเอามาตรงที่
 ```
     constructor(props){
