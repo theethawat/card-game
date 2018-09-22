@@ -4,9 +4,7 @@
 ```
     constructor(props){
         super(props)
-        this.state = {
-            active: false,
-        }
+        this.state = prepareStateFromWord(this.props.value)
     }
 ```
 ใน WordCard.js
