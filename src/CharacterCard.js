@@ -9,7 +9,7 @@ export default class CharacterCard extends Component {
         }
     }
     componentDidUpdate(prevProps){
-        if(prevProps.attempt != this.props.attempt){
+        if(prevProps.attempt !== this.props.attempt){
             this.setState({active:false})
         }
     }
@@ -21,7 +21,7 @@ export default class CharacterCard extends Component {
     }
     render(){
         let className=`card ${this.state.active ? 'activeCard' : ''} `
-        {/*เป็นการตั้ง className โดยบอกว่า State นี้ Active หรือไม่ ถ้า Active ก็เป็น activeCard ถ้าไม่ Active ก็ว่างไว้*/}
+        /*เป็นการตั้ง className โดยบอกว่า State นี้ Active หรือไม่ ถ้า Active ก็เป็น activeCard ถ้าไม่ Active ก็ว่างไว้*/
         return(
             <div className={className} onClick={this.activate}>
                 {this.props.value}

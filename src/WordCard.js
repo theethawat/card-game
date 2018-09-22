@@ -29,11 +29,12 @@ export default class WordCard extends Component{
         super(props)
         this.state = prepareStateFormWord(this.props.value)
     }
+    
     activationHandler = (c) => { 
         let guess = [this.state.guess, c]
         this.setState({guess})
-        if(guess.length == this.state.chars.length){
-            if(guess.join('').toString() == this.state.word){
+        if(guess.length === this.state.chars.length){
+            if(guess.join('').toString() === this.state.word){
                 this.setState({guess: [], completed:true})
             }
             else{

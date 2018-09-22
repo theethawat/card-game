@@ -5,6 +5,7 @@
   "homepage": "https://theethawat.github.io/card-game",
   "dependencies": {
     "lodash": "^4.17.11",
+    "lodash.shuffle": "^4.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "1.1.5"

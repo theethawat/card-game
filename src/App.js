@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import WordCard from './WordCard';
 import './App.css';
 
-const word = "Hello";
+//const word = "Hello";
 class App extends Component {
   render() {
     return (
@@ -10,7 +10,7 @@ class App extends Component {
       {
         /*This is JSX */
       }
-      <WordCard value="hello" />
+      <WordCard value="Suthon Saewong" />
       </div>
     );
   }
