@@ -5,8 +5,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
-      <h3>โปรแกรมเดาคำให้ถูกต้อง</h3>
+      <div className="container">
+      <br/>
+      <h2>Guest Me If You Can</h2>
+      <h3>มาลุ้นดูสิ อาจจะเจอกับคำที่ยังรออยู่ </h3>
       {/*เป็นการเรียกใช้ class ที่ชื่อ WordCard โดยส่งคำว่า Hello ไป*/}
       <WordCard value="Hello" />
       </div>

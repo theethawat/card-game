@@ -29,6 +29,16 @@ export default class WordCard extends Component{
         super(props)
         this.state = prepareStateFormWord(this.props.value)
         /*เป็นการนำ props มา  Set ค่า State */
+        /*ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub sunisathammasoon (https://github.com/sunisathammasoon/)
+         หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub โดยเอามาตรงที่
+
+    constructor(props){
+        super(props)
+        this.state = prepareStateFromWord(this.props.value)
+    } 
+
+    และ let guess = [this.state.guess,c] เป็น let guess = [this.state.guess]+c
+    */
     }
     
     activationHandler = (c) => { 
@@ -62,7 +72,8 @@ export default class WordCard extends Component{
                     Array.from(this.state.chars).map((c,i) => <CharacterCard value = {c} key = {i}  attempt={this.state.attempt}  activationHandler = {this.activationHandler} />) 
                     /*prop คือตัวที่มันส่งข้ามไฟล์ แต่ State คือสถานะ ณ ขณะนี้ เราต้อง Define มาตอนนี้เราอยู่ props ไหน State ไหน ถึงจะนำค่าไปใช้ได้ */
                 }
-                
+                <h3>ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} </h3>
+                {/*ต้องระบุ State ให้มันด้วย*/}
                 <h3>Result : {this.state.completed ? 'You Win' : 'Please Fill until Finished'} </h3>
             </div>
         );
