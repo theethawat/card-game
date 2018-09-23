@@ -28,17 +28,21 @@ export default class WordCard extends Component{
     constructor(props){
         super(props)
         this.state = prepareStateFormWord(this.props.value)
+        /*เป็นการนำ props มา  Set ค่า State */
     }
     
     activationHandler = (c) => { 
-        let guess = [this.state.guess, c]
+        let guess = [this.state.guess]+c
+        //let result = "waiting for selected"
         this.setState({guess})
         if(guess.length === this.state.chars.length){
-            if(guess.join('').toString() === this.state.word){
+            if(guess === this.state.word){
                 this.setState({guess: [], completed:true})
+                //result ="You Win"
             }
             else{
                 this.setState({guess: [],attempt: this.state.attempt + 1})
+                //result ="You Lost Try Again"
             }
         }
      }
@@ -47,8 +51,19 @@ export default class WordCard extends Component{
         return(
             <div>
                 { 
-                    Array.from(this.props.value).map((c,i) => <CharacterCard value = {c} key = {i} activationHandler = {this.activationHandler} />) 
+                    /*
+                    { Array.from(this.state.chars).map( 
+                    (c,i)=> <CharacterCard value = {c} key = {i} attempt={this.state.attempt} 
+                    activateHandler={this.activateHandler}/> 
+                    ได้ไอเดียจาก https://github.com/Ikhalas/ ครับ
+                    */
+
+                     /*นำค่า State มาใช้ เพื่อจะได้เห็นมัน Random */
+                    Array.from(this.state.chars).map((c,i) => <CharacterCard value = {c} key = {i}  attempt={this.state.attempt}  activationHandler = {this.activationHandler} />) 
+                    /*prop คือตัวที่มันส่งข้ามไฟล์ แต่ State คือสถานะ ณ ขณะนี้ เราต้อง Define มาตอนนี้เราอยู่ props ไหน State ไหน ถึงจะนำค่าไปใช้ได้ */
                 }
+                
+                <h3>Result : {this.state.completed ? 'You Win' : 'Please Fill until Finished'} </h3>
             </div>
         );
     }

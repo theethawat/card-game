@@ -7,10 +7,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      {
-        /*This is JSX */
-      }
-      <WordCard value="Suthon Saewong" />
+  
+      <WordCard value="Hello" />
       </div>
     );
   }
