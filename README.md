@@ -1,5 +1,5 @@
 ## My Readme
--ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon](https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
+- ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon](https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
 โดยเอามาตรงที่
 ```
     constructor(props){
@@ -7,7 +7,13 @@
         this.state = prepareStateFromWord(this.props.value)
     }
 ```
-ใน WordCard.js
+- ขอขอบคุณไอเดียจาก GitHub ของเพื่อนผม จาก GitHub [Ikhalas](https://github.com/Ikhalas/) โดยเอามาตรงที่
+```
+ { Array.from(this.state.chars).map( 
+                    (c,i)=> <CharacterCard value = {c} key = {i} attempt={this.state.attempt} 
+                    activateHandler={this.activateHandler}/> 
+```
+ใน WordCard.js ครับ
 
 
 ## React Readme
