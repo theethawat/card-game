@@ -137,6 +137,7 @@ export default class WordCard extends Component{
                 <h6 className={isActiveState}>{this.state.completed ?  'ใช่โอชิของคุณหรือเปล่า ' : ''} </h6>
 
                 {/*Thank you https://stackoverflow.com/questions/42580130/display-images-in-react-using-jsx-without-import */}
+                <br/>
                 <button className="center-button btn btn-primary" onClick={(e) => this.refresh(e)}>เปลี่ยนคำถาม</button>
             </div>
         );
