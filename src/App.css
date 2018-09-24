@@ -40,3 +40,15 @@
   color:red;
   background: pink;
 }
+.member-photo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:300px;
+  width:250px;
+  margin-top:1em;
+  margin-bottom: 1em;
+}
+.acenter{
+  text-align: center;
+}

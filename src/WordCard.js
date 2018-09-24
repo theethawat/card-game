@@ -8,31 +8,9 @@ import _ from 'lodash';
    โดยมันจะเอา lodash มาติดตั้งให้
 */
 import './App.css';
-// import cherprang from './photo/cherprang.jpg';
-// import izurina from './photo/izurina.jpg';
-// import jaa from './photo/jaa.jpg';
-// import jane from './photo/jane.jpg';
-// import jennis from './photo/jennis.jpg';
-// import jib from './photo/jib.jpg';
-// import kaew from './photo/kaew.jpg';
-// import kaimook from './photo/kaimook.jpg';
-// import kate from './photo/kate.jpg';
-// import korn from './photo/korn.jpg';
-// import maysa from './photo/maysa.jpg';
-// import mind from './photo/mind.jpg';
-// import miori from './photo/miori.jpg';
-// import mobile from './photo/mobile.jpg';
-// import music from './photo/music.jpg';
-// import namneung from './photo/namneung.jpg';
-// import namsai from './photo/namsai.jpg';
-// import nink from './photo/nink.jpg';
-// import noey from './photo/noey.jpg';
-// import orn from './photo/orn.jpg';
-// import piam from './photo/piam.jpg';
-// import pun from './photo/pun.jpg';
-// import pupe from './photo/pupe.jpg';
-// import satchan from './photo/satchan.jpg';
-// import tarwaan from './photo/tarwaan.jpg';
+//Import Photo
+//This isn't good way to import photo from the folder
+//นี่ไม่ใช่วิธีที่ดีในการเอาภาพมาจาก folder แต่ผมทำวิธีอื่นไม่เป็นแล้วครับ เดี๋ยวค่อยฝึก
 import  './photo/cherprang.jpg';
 import  './photo/izurina.jpg';
 import './photo/jaa.jpg';
@@ -59,6 +37,8 @@ import  './photo/pupe.jpg';
 import  './photo/satchan.jpg';
 import  './photo/tarwaan.jpg';
 
+// Member photo from www.bnk48.com/#/members 
+// This website is for educational purpose No copyright infringement intention.
 //import value from './photo/'+value+'.jpg';
 
 const prepareStateFormWord = (given_word) =>{
@@ -138,8 +118,10 @@ export default class WordCard extends Component{
                 <h3>ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} </h3>
                 <h3>ความพยายามครั้งที่ {this.state.attempt} / 5 </h3>
                 {/*ต้องระบุ State ให้มันด้วย*/}
-                <h3>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ' + this.state.word : 'Please Fill until Finished'} </h3>
-                <img src={this.state.completed ? require('./photo/'+this.state.word.toLowerCase()+'.jpg') :'' } />
+                <h3>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ': 'Please Fill until Finished'} </h3>
+                {/*Thank you https://stackoverflow.com/questions/42580130/display-images-in-react-using-jsx-without-import */}
+                <img className="member-photo" src={this.state.completed ? require('./photo/'+this.state.word.toLowerCase()+'.jpg') :'' } alt={this.state.word} />
+                <h2 className="acenter">{this.state.completed ? this.state.word : ''} </h2>
             </div>
         );
     }
