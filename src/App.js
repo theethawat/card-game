@@ -38,8 +38,9 @@ class App extends Component {
     return (
       <div className="container">
       <br/>
-      <h2>Guest Me If You Can</h2>
-      <h3>เรียงตัวอักษรชื่อเมมเบอร์ BNK48 รุ่นที่ 1 สุ่ม 1 จาก 25 คน</h3>
+      <h2 className="acenter">ให้ React ทำนายกัน | Guest Me If You Can</h2>
+      <h4 className="acenter">เรียงตัวอักษรชื่อเมมเบอร์ BNK48 รุ่นที่ 1 สุ่ม 1 จาก 25 คน</h4>
+      <hr/>
       <h3>มาลุ้นดูสิ อาจจะเจอกับคำที่ยังรออยู่ </h3>
       <h4 className="text-info">คุณมีสิทธิแค่ 5 ครั้งเท่านั้น</h4>
       {/*เป็นการเรียกใช้ class ที่ชื่อ WordCard โดยส่งคำว่า Hello ไป*/}

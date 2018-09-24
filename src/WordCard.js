@@ -66,7 +66,7 @@ const prepareStateFormWord = (given_word) =>{
 export default class WordCard extends Component{
     constructor(props){
         super(props)
-        this.state = prepareStateFormWord(this.props.value)
+        this.state = prepareStateFormWord(this.props.value) 
         /*เป็นการนำ props มา  Set ค่า State */
         /*ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub sunisathammasoon (https://github.com/sunisathammasoon/)
          หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub โดยเอามาตรงที่
@@ -79,7 +79,11 @@ export default class WordCard extends Component{
     และ let guess = [this.state.guess,c] เป็น let guess = [this.state.guess]+c
     */
     }
-    
+
+    refresh () {
+            window.location.reload()
+    }
+
     activationHandler = (c) => { 
         let guess = [this.state.guess]+c
         this.setState({guess})
@@ -98,9 +102,14 @@ export default class WordCard extends Component{
                 //result ="You Lost Try Again"
             }
         }
+
+    
+
      }
    
     render(){
+        let isActiveState =this.state.completed  ? 'acenter' : 'dis-none'
+        let isActivePhoto =this.state.completed  ? 'member-photo' : 'dis-none'
         return(
             <div>
                 { 
@@ -114,14 +123,21 @@ export default class WordCard extends Component{
                      /*นำค่า State มาใช้ เพื่อจะได้เห็นมัน Random */ 
                     Array.from(this.state.chars).map((c,i) => <CharacterCard value = {c} key = {i}  attempt={this.state.attempt}  activationHandler = {this.activationHandler} />) 
                     /*prop คือตัวที่มันส่งข้ามไฟล์ แต่ State คือสถานะ ณ ขณะนี้ เราต้อง Define มาตอนนี้เราอยู่ props ไหน State ไหน ถึงจะนำค่าไปใช้ได้ */
+                        
+                        
                 }
-                <h3>ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} </h3>
-                <h3>ความพยายามครั้งที่ {this.state.attempt} / 5 </h3>
+                <h4>ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} </h4>
+                <h4>ความพยายามครั้งที่ {this.state.attempt} / 5 </h4>
                 {/*ต้องระบุ State ให้มันด้วย*/}
-                <h3>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ': 'Please Fill until Finished'} </h3>
+                <h4>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ': 'Please Fill until Finished'} </h4>
+                
                 {/*Thank you https://stackoverflow.com/questions/42580130/display-images-in-react-using-jsx-without-import */}
-                <img className="member-photo" src={this.state.completed ? require('./photo/'+this.state.word.toLowerCase()+'.jpg') :'' } alt={this.state.word} />
-                <h2 className="acenter">{this.state.completed ? this.state.word : ''} </h2>
+                <img className={isActivePhoto} src={this.state.completed ? require('./photo/'+this.state.word.toLowerCase()+'.jpg') :'' } alt={this.state.completed ? this.state.word : ''} />
+                <h2 className={isActiveState}>{this.state.completed ? this.state.word + '  BNK48' : ''} </h2>
+                <h6 className={isActiveState}>{this.state.completed ?  'ใช่โอชิของคุณหรือเปล่า ' : ''} </h6>
+
+                {/*Thank you https://stackoverflow.com/questions/42580130/display-images-in-react-using-jsx-without-import */}
+                <button className="center-button btn btn-primary" onClick={(e) => this.refresh(e)}>เปลี่ยนคำถาม</button>
             </div>
         );
     }

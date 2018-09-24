@@ -52,3 +52,11 @@
 .acenter{
   text-align: center;
 }
+.dis-none{
+  display: none;
+}
+.center-button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
