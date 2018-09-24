@@ -49,12 +49,16 @@ export default class WordCard extends Component{
     
     activationHandler = (c) => { 
         let guess = [this.state.guess]+c
-        //let result = "waiting for selected"
         this.setState({guess})
         if(guess.length === this.state.chars.length){
             if(guess === this.state.word){
                 this.setState({guess: [], completed:true})
-                //result ="You Win"
+            }
+            else if(this.state.attempt === 5){
+                //สั่งให้แจ้งเตือน ว่าคุณทำไปครบทั้ง 5 ครั้งแล้ว
+                window.alert("You Lost ไปฝึกมาใหม่")
+                //สั่งให้หน้าเว็บ Refresh เพื่อขึ้นคำถามข้อใหม่
+                window.location.reload()
             }
             else{
                 this.setState({guess: [],attempt: this.state.attempt + 1})
@@ -79,8 +83,9 @@ export default class WordCard extends Component{
                     /*prop คือตัวที่มันส่งข้ามไฟล์ แต่ State คือสถานะ ณ ขณะนี้ เราต้อง Define มาตอนนี้เราอยู่ props ไหน State ไหน ถึงจะนำค่าไปใช้ได้ */
                 }
                 <h3>ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} </h3>
+                <h3>ความพยายามครั้งที่ {this.state.attempt} / 5 </h3>
                 {/*ต้องระบุ State ให้มันด้วย*/}
-                <h3>Result : {this.state.completed ? 'You Win' : 'Please Fill until Finished'} </h3>
+                <h3>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ' + this.state.word : 'Please Fill until Finished'} </h3>
             </div>
         );
     }

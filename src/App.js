@@ -7,7 +7,9 @@ import _ from 'lodash';
 const memberRandom = () =>{
   /*Let make it random question */
  
-  let member = ['cherprang','music','jennis','pun','mobile','noey']
+  let member = ['cherprang','izurina','jaa','jane','jennis','jib','kaew','kaimook',
+  'kate','korn','maysa','mind','miori','mobile','music','namneung','namsai','nink',
+  'noey','orn','piam','pun','pupe','satchan','tarwaan']
  
   /*Random ตำแหน่งของ Array จาก member เช่น จาก cherprang music jennis ... เป็น jennis cherprang music ... เป็นต้น
   โดยใช้คำสั่ง shuffle ได้มาจาก WordCard.js */
@@ -37,7 +39,9 @@ class App extends Component {
       <div className="container">
       <br/>
       <h2>Guest Me If You Can</h2>
+      <h3>เรียงตัวอักษรชื่อเมมเบอร์ BNK48 รุ่นที่ 1 สุ่ม 1 จาก 25 คน</h3>
       <h3>มาลุ้นดูสิ อาจจะเจอกับคำที่ยังรออยู่ </h3>
+      <h4 className="text-info">คุณมีสิทธิแค่ 5 ครั้งเท่านั้น</h4>
       {/*เป็นการเรียกใช้ class ที่ชื่อ WordCard โดยส่งคำว่า Hello ไป*/}
       <WordCard value={this.state.firstArrayThatRandom} />
       </div>
