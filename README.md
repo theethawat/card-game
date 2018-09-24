@@ -14,7 +14,14 @@
                     activateHandler={this.activateHandler}/> 
 ```
 ใน WordCard.js ครับ
-
+- ถ้าระบบไม่รู้จัก _ หรือ lodash ให้พิมพ์คำสั่ง 
+```
+    npm i -g npm
+    npm i --save lodash
+```
+    
+   ใน Command Prompt หรือ Terminal (ตอนนั้นชี้อยู่ที่ card-game กล่าวคือ D:/card-game แล้วพิมพ์ npm i -g npm .....)
+   โดยมันจะเอา lodash มาติดตั้งให้
 
 ## React Readme
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
