@@ -40,7 +40,7 @@ yarn build
 yarn run deploy
 ```
 แล้วมาที่ Repository ของ GitHub อันนี้ ไปที่ Setting > GitHub Page แล้วเลือก branch gh-pages branch แล้ว save เป็นบริการฟรีของ GitHub
-
+ขอบคุณที่มาจาก [react-gh-pages](https://github.com/gitname/react-gh-pages)
 
 Made with Love and Assigned from Theethawat Savastham | ธีร์ธวัช สวาสดิ์ธรรม CoE'28 PSU
 
