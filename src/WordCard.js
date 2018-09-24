@@ -109,9 +109,11 @@ export default class WordCard extends Component{
    
     render(){
         let isActiveState =this.state.completed  ? 'acenter' : 'dis-none'
+        let isActiveWord =this.state.completed  ? 'acenter kanit' : 'dis-none'
         let isActivePhoto =this.state.completed  ? 'member-photo' : 'dis-none'
         return(
             <div>
+                <div className="acenter">
                 { 
                     /*
                     { Array.from(this.state.chars).map( 
@@ -126,14 +128,15 @@ export default class WordCard extends Component{
                         
                         
                 }
-                <h4>ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} </h4>
-                <h4>ความพยายามครั้งที่ {this.state.attempt} / 5 </h4>
+                </div>
+                <h5 className="acenter">ตอนนี้คุณเลือกไปแล้ว {this.state.guess.length} / {this.state.chars.length} | ความพยายามครั้งที่ {this.state.attempt} / 5 </h5>
+              
                 {/*ต้องระบุ State ให้มันด้วย*/}
-                <h4>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ': 'Please Fill until Finished'} </h4>
+                <h4 className="acenter">Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ': 'Please Fill until Finished'} </h4>
                 
                 {/*Thank you https://stackoverflow.com/questions/42580130/display-images-in-react-using-jsx-without-import */}
                 <img className={isActivePhoto} src={this.state.completed ? require('./photo/'+this.state.word.toLowerCase()+'.jpg') :'' } alt={this.state.completed ? this.state.word : ''} />
-                <h2 className={isActiveState}>{this.state.completed ? this.state.word + '  BNK48' : ''} </h2>
+                <h2 className={isActiveWord}>{this.state.completed ? this.state.word + '  BNK48' : ''} </h2>
                 <h6 className={isActiveState}>{this.state.completed ?  'ใช่โอชิของคุณหรือเปล่า ' : ''} </h6>
 
                 {/*Thank you https://stackoverflow.com/questions/42580130/display-images-in-react-using-jsx-without-import */}

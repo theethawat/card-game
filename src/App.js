@@ -37,14 +37,20 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-      <br/>
-      <h2 className="acenter">ให้ React ทำนายกัน | Guest Me If You Can</h2>
-      <h4 className="acenter">เรียงตัวอักษรชื่อเมมเบอร์ BNK48 รุ่นที่ 1 สุ่ม 1 จาก 25 คน</h4>
-      <hr/>
-      <h3>มาลุ้นดูสิ อาจจะเจอกับคำที่ยังรออยู่ </h3>
-      <h4 className="text-info">คุณมีสิทธิแค่ 5 ครั้งเท่านั้น</h4>
-      {/*เป็นการเรียกใช้ class ที่ชื่อ WordCard โดยส่งคำว่า Hello ไป*/}
-      <WordCard value={this.state.firstArrayThatRandom} />
+        <br/>
+        <h2 className="acenter kanit">ให้ React ทำนายกัน | Guest Me If You Can</h2>
+        <h4 className="acenter hotpink kanit">เรียงตัวอักษรชื่อเมมเบอร์ BNK48 รุ่นที่ 1 สุ่ม 1 จาก 25 คน</h4>
+        <hr/>
+        <h4 className="text-info">คุณมีสิทธิแค่ 5 ครั้งเท่านั้น</h4>
+        {/*เป็นการเรียกใช้ class ที่ชื่อ WordCard โดยส่งคำว่า Hello ไป*/}
+          <WordCard value={this.state.firstArrayThatRandom} />
+        <br/>
+        <hr/>
+        <p className="kanitlight acenter"> 
+            Made With <i className="fas fa-heart"></i> & <i className="fas fa-chalkboard-teacher"></i> By <a href="https://theethawat.github.io">Theethawat</a> Powered By <a href="https://reactjs.org/"><i className="fab fa-react"></i> React </a> 
+            <br/>
+            Hosted In <a href="https://github.com/theethawat"><i class="fab fa-github"></i> GitHub.com/Theethawat </a>
+        </p>
       </div>
     );
   }
