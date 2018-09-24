@@ -68,7 +68,7 @@ export default class WordCard extends Component{
                     ได้ไอเดียจาก https://github.com/Ikhalas/ ครับ
                     */
 
-                     /*นำค่า State มาใช้ เพื่อจะได้เห็นมัน Random */
+                     /*นำค่า State มาใช้ เพื่อจะได้เห็นมัน Random */ 
                     Array.from(this.state.chars).map((c,i) => <CharacterCard value = {c} key = {i}  attempt={this.state.attempt}  activationHandler = {this.activationHandler} />) 
                     /*prop คือตัวที่มันส่งข้ามไฟล์ แต่ State คือสถานะ ณ ขณะนี้ เราต้อง Define มาตอนนี้เราอยู่ props ไหน State ไหน ถึงจะนำค่าไปใช้ได้ */
                 }
