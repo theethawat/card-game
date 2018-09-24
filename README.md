@@ -1,3 +1,4 @@
+# 3SA03 React Lab
 ## My Readme
 - ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon](https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
 โดยเอามาตรงที่
@@ -19,10 +20,15 @@
     npm i -g npm
     npm i --save lodash
 ```
-    
+
    ใน Command Prompt หรือ Terminal (ตอนนั้นชี้อยู่ที่ card-game กล่าวคือ D:/card-game แล้วพิมพ์ npm i -g npm .....)
    โดยมันจะเอา lodash มาติดตั้งให้
-
+- CSS Library ที่ใช้ได้แก่
+  -[Bootstrap 4.1](https://getbootstrap.com)
+  -[Google Fonts](https://fonts.google.com)
+  -[Fontawesome](https://fontawesome.io)
+- ขอขอบคุณภาพจาก [BNK48 Office](https://www.bnk48.com/#/Member) ทำเพื่อการศึกษา มิได้มีเจตนาละเมิดลิขสิทธิ์
+Made with Love and Assigned from ธีร์ธวัช สวาสดิ์ธรรม 
 ## React Readme
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
