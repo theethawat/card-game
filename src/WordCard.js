@@ -8,13 +8,65 @@ import _ from 'lodash';
    โดยมันจะเอา lodash มาติดตั้งให้
 */
 import './App.css';
+// import cherprang from './photo/cherprang.jpg';
+// import izurina from './photo/izurina.jpg';
+// import jaa from './photo/jaa.jpg';
+// import jane from './photo/jane.jpg';
+// import jennis from './photo/jennis.jpg';
+// import jib from './photo/jib.jpg';
+// import kaew from './photo/kaew.jpg';
+// import kaimook from './photo/kaimook.jpg';
+// import kate from './photo/kate.jpg';
+// import korn from './photo/korn.jpg';
+// import maysa from './photo/maysa.jpg';
+// import mind from './photo/mind.jpg';
+// import miori from './photo/miori.jpg';
+// import mobile from './photo/mobile.jpg';
+// import music from './photo/music.jpg';
+// import namneung from './photo/namneung.jpg';
+// import namsai from './photo/namsai.jpg';
+// import nink from './photo/nink.jpg';
+// import noey from './photo/noey.jpg';
+// import orn from './photo/orn.jpg';
+// import piam from './photo/piam.jpg';
+// import pun from './photo/pun.jpg';
+// import pupe from './photo/pupe.jpg';
+// import satchan from './photo/satchan.jpg';
+// import tarwaan from './photo/tarwaan.jpg';
+import  './photo/cherprang.jpg';
+import  './photo/izurina.jpg';
+import './photo/jaa.jpg';
+import  './photo/jane.jpg';
+import  './photo/jennis.jpg';
+import './photo/jib.jpg';
+import  './photo/kaew.jpg';
+import  './photo/kaimook.jpg';
+import  './photo/kate.jpg';
+import  './photo/korn.jpg';
+import  './photo/maysa.jpg';
+import  './photo/mind.jpg';
+import  './photo/miori.jpg';
+import  './photo/mobile.jpg';
+import  './photo/music.jpg';
+import  './photo/namneung.jpg';
+import  './photo/namsai.jpg';
+import  './photo/nink.jpg';
+import  './photo/noey.jpg';
+import './photo/orn.jpg';
+import  './photo/piam.jpg';
+import './photo/pun.jpg';
+import  './photo/pupe.jpg';
+import  './photo/satchan.jpg';
+import  './photo/tarwaan.jpg';
 
+//import value from './photo/'+value+'.jpg';
 
 const prepareStateFormWord = (given_word) =>{
     /*Recieve word from App.js */
    
     let word = given_word.toUpperCase()
     let chars = _.shuffle(Array.from(word))
+    
     return{
         word,
         chars,
@@ -30,6 +82,7 @@ const prepareStateFormWord = (given_word) =>{
          */
     }
 }
+
 export default class WordCard extends Component{
     constructor(props){
         super(props)
@@ -86,6 +139,7 @@ export default class WordCard extends Component{
                 <h3>ความพยายามครั้งที่ {this.state.attempt} / 5 </h3>
                 {/*ต้องระบุ State ให้มันด้วย*/}
                 <h3>Result : {this.state.completed ? 'You Win เมมเบอร์คนนั้นคือ ' + this.state.word : 'Please Fill until Finished'} </h3>
+                <img src={this.state.completed ? require('./photo/'+this.state.word.toLowerCase()+'.jpg') :'' } />
             </div>
         );
     }
