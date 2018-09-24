@@ -1,5 +1,6 @@
 # 3SA03 React Lab
 ## My Readme
+
 - ขอขอบคุณไอเดียบางอย่างจาก GitHub ของเพื่อนผมครับ จาก GitHub [sunisathammasoon](https://github.com/sunisathammasoon/) หวังว่าอาจารย์คงไม่ว่าอะไรนะครับ เนื่องจากมันเป็นประโยชน์สำคัญของ GitHub 
 โดยเอามาตรงที่
 ```
@@ -29,7 +30,20 @@
   - [Fontawesome](https://fontawesome.io)
 - ขอขอบคุณภาพจาก [BNK48 Office](https://www.bnk48.com/#/Member) ทำเพื่อการศึกษา มิได้มีเจตนาละเมิดลิขสิทธิ์
 
+เข้าชมเว็บไซต์ได้ที่ [theethawat.github.io/card-game](https://theethawat.github.io/card-game) โดยการให้มัน deploy websiteใช้คำสั่ง
+```
+npm install gh-pages --save-dev
+```
+ก่อนที่จะแก้ไขข้อมูลในไฟล์ package.json ให้มัน deploy ใน githubusername.github.io/card-game
+```
+yarn build
+yarn run deploy
+```
+แล้วมาที่ Repository ของ GitHub อันนี้ ไปที่ Setting > GitHub Page แล้วเลือก branch gh-pages branch แล้ว save เป็นบริการฟรีของ GitHub
+
+
 Made with Love and Assigned from Theethawat Savastham | ธีร์ธวัช สวาสดิ์ธรรม CoE'28 PSU
+
 ## React Readme
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
